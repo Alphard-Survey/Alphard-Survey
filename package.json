@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./server/app.js"
+    "start": "node ./server/app.js"
   },
   "dependencies": {
     "@angular/cli": "^14.2.8",
@@ -17,8 +17,5 @@
     "jquery": "^3.6.1",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
   }
 }
