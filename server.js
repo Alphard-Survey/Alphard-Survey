@@ -9,7 +9,7 @@ var debug = require('debug')('alphard-survey:server');
 var http = require('http');
 
 /**
- * Get port from environment and store in Express.
+ * Get port from environment and store in Express. LOL HI
  */
 
 var port = normalizePort(process.env.PORT || '3000');
