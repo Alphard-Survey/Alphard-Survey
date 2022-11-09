@@ -108,3 +108,44 @@ module.exports.deletepage = (req, res, next) => {
     }
   });
 };
+
+module.exports.answerpage = (req, res, next) => {
+  let id = req.params.id;
+
+  Survey.findById(id, (err, surveytoanswer) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } else {
+      //show the edit view
+      res.render("survey/answer", {
+        title: "Answer Survey",
+        survey: surveytoanswer,
+        displayName: req.user ? req.user.displayName : "",
+      });
+    }
+  });
+
+}
+
+module.exports.processinganswerpage = (req, res, next) => {
+  let id = req.params.id; //id of actual object
+
+  let answersurvey = Survey({
+    _id: id,
+    q1: req.body.q1,
+    q2: req.body.q2,
+    q3: req.body.q3,
+    q4: req.body.q4,
+    q5: req.body.q5,
+  });
+  Survey.updateOne({ _id: id }, answersurvey, (err) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } else {
+      //refresh the book list
+      res.redirect("/survey-list");
+    }
+  });
+};

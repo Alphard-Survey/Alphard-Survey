@@ -1,0 +1,157 @@
+<%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
+
+<div class="container">
+    <div class="row">
+      <div class="offset-md-3 col-md-6">
+        <h1><%=title %></h1>
+  
+        <form class="form" method="post">
+  
+          <div class="from-group">
+            <label for="q1TextField">Q1</label>
+            <input
+            type="text"
+            class="form-control"
+            id="q1TextField"
+            placeholder="Question 1"
+            name="q1"
+            value="<%= survey.q1 %>"
+            readonly
+            required
+            />
+          </div>
+          <div class="from-group">
+            <label for="a1TextField">A1</label>
+            <input
+            type="text"
+            class="form-control"
+            id="a1TextField"
+            placeholder="Answer 1"
+            name="a1"
+            required
+            />
+          </div>
+
+  
+          <div class="from-group">
+            <label for="q2TextField">Q2</label>
+            <input
+            type="text"
+            class="form-control"
+            id="q2TextField"
+            placeholder="Question 2"
+            name="q2"
+            value="<%= survey.q2 %>"
+            readonly
+            required
+            />
+          </div>
+
+          <div class="from-group">
+            <label for="a2TextField">A2</label>
+            <input
+            type="text"
+            class="form-control"
+            id="a2TextField"
+            placeholder="Answer 2"
+            name="a2"
+            required
+            />
+          </div>
+
+
+          <div class="from-group">
+            <label for="q3TextField">Q3</label>
+            <input
+            type="text"
+            class="form-control"
+            id="q3TextField"
+            placeholder="Question 3"
+            name="q3"
+            value="<%= survey.q3 %>"
+            readonly
+            required
+            />
+          </div>
+
+          <div class="from-group">
+            <label for="a3TextField">A3</label>
+            <input
+            type="text"
+            class="form-control"
+            id="a3TextField"
+            placeholder="Answer 3"
+            name="a3"
+            required
+            />
+          </div>
+
+
+          <div class="from-group">
+            <label for="q4TextField">Q4</label>
+            <input
+            type="text"
+            class="form-control"
+            id="q4TextField"
+            placeholder="Question 4"
+            name="q4"
+            value="<%= survey.q4 %>"
+            readonly
+            required
+            />
+          </div>
+
+          <div class="from-group">
+            <label for="a4TextField">A4</label>
+            <input
+            type="text"
+            class="form-control"
+            id="a4TextField"
+            placeholder="Answer 4"
+            name="a4"
+            required
+            />
+          </div>
+
+
+          <div class="from-group">
+            <label for="q5TextField">Q5</label>
+            <input
+            type="text"
+            class="form-control"
+            id="q5TextField"
+            placeholder="Question 5"
+            name="q5"
+            value="<%= survey.q5 %>"
+            readonly
+            required
+            />
+          </div>
+  
+          <div class="from-group">
+            <label for="a5TextField">A5</label>
+            <input
+            type="text"
+            class="form-control"
+            id="a5TextField"
+            placeholder="Answer 5"
+            name="a5"
+            required
+            />
+          </div>
+
+  
+          <button class="btn btn-primary" type="submit">
+            <i class="fas fa-edit"></i>Submit
+          </button>
+  
+          <a href="/survey-list" class="btn btn-warning">
+            <i class="fas fa-undo"></i>Cancel
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+<%- include ../partials/bottom_nav.ejs %> <%- include ../partials/footer.ejs %>
