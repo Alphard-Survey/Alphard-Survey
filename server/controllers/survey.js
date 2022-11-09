@@ -35,6 +35,11 @@ module.exports.addprocesspage = (req, res, next) => {
     owner: req.body.owner,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
+    q1: req.body.q1,
+    q2: req.body.q2,
+    q3: req.body.q3,
+    q4: req.body.q4,
+    q5: req.body.q5,
   });
   Survey.create(newSurvey, (err, Survey) => {
     if (err) {
@@ -74,6 +79,11 @@ module.exports.processingeditpage = (req, res, next) => {
     owner: req.body.owner,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
+    q1: req.body.q1,
+    q2: req.body.q2,
+    q3: req.body.q3,
+    q4: req.body.q4,
+    q5: req.body.q5,
   });
   Survey.updateOne({ _id: id }, updatesurvey, (err) => {
     if (err) {
