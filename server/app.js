@@ -7,7 +7,7 @@ let  path = require('path');
 
 const surveysRouter = require("./routes/survey");
 const notFound = require("./middleware/not-found");
-const connectDB = require("./db/connect");
+//const connectDB = require("./db/connect");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
