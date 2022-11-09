@@ -2,9 +2,11 @@
   "name": "alphard-survey",
   "version": "0.0.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
     "start": "node ./server/app.js"
   },
+  "author":"alphard",
   "dependencies": {
     "@angular/cli": "^14.2.8",
     "@fortawesome/fontawesome-free": "^6.2.0",
